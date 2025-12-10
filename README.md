@@ -1,4 +1,6 @@
-# uap map
+# UAP Map
+
+Unidentified Aerial Phenomena
 
 A Pen created on CodePen.
 
