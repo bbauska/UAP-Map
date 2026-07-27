@@ -121,9 +121,9 @@
   */
   var graph = {
     nodes: [
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // ORIGINAL NODES (about 159 in total):
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // Roswell-related (10)
       { id: "Jesse Marcel", group: "Roswell", description: "Military intelligence officer involved in Roswell debris recovery." },
       { id: "Glenn Dennis", group: "Roswell", description: "Mortician who claimed to have witnessed strange Roswell activity at the base." },
@@ -315,9 +315,9 @@
       { id: "Zamora Incident", group: "Locations/Incidents", description: "1964 Socorro, NM landing witnessed by Lonnie Zamora." },
       { id: "Mantell Incident", group: "Locations/Incidents", description: "1948 chase where Capt. Mantell died pursuing UFO." },
 
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // NEWLY ADDED NODES (~48)
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // Additional Contactees (6)
       { id: "Orfeo Angelucci", group: "Contactees", description: "1950s contactee claiming friendly space brothers." },
       { id: "Howard Menger", group: "Contactees", description: "Claimed contacts with Venusian beings, 1950s." },
@@ -423,9 +423,9 @@
       { id: "Victor Viggiani", group: "Disclosure", description: "Canadian activist for UFO transparency." },
       { id: "Paola Harris", group: "Disclosure", description: "Researcher aligned with Greer's disclosure efforts." },
 
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // FIXING MISSING NODES (added in bold)
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // Billy Meier (mentioned in links but was missing)
       { id: "Billy Meier", group: "Contactees", description: "Controversial Swiss contactee with 'Pleiadian' claims." },
 
@@ -456,9 +456,9 @@
     ],  /* var nodes */
 
     links: [
-      // ------------------------------------------------------------------
+      // ----------------------------------------
       // ORIGINAL LINKS + previously added expansions
-      // ------------------------------------------------------------------
+      // ----------------------------------------
       { source: "Marilyn Monroe", target: "John F. Kennedy", connection: "Rumored affair, UFO secrets" },
       { source: "John F. Kennedy", target: "Majestic 12", connection: "Rumored MJ-12 interest" },
       { source: "Harry S. Truman", target: "Majestic 12", connection: "Executive creation" },
@@ -591,9 +591,9 @@
 
       // 50 extra older expansions omitted for brevity...
       // (They are presumably all in your original code.)
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // BRAND NEW LINKS that referenced the missing nodes
-      // --------------------------------------------------------------------
+      // ----------------------------------------
       // Additional Politicians
       { source: "Marco Rubio", target: "David Grusch", connection: "Senate hearing witness" },
       { source: "Marco Rubio", target: "AARO", connection: "Push for UAP oversight" },
@@ -721,9 +721,9 @@
     ]  /* var links */
   };  /* var graph */
 
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   // Color scale & legend data
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   var colorScale = {
     "Roswell": "#FF4136",
     "MJ-12": "#0074D9",
@@ -748,9 +748,9 @@
     color: colorScale[groupName]
   }));
 
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   // Setup the D3 visualization
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   var width = window.innerWidth,
     height = window.innerHeight;
 
@@ -773,9 +773,9 @@
     .force("center", d3.forceCenter(width / 2, height / 2))
     .force("collision", d3.forceCollide().radius(20));
 
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   // Render the links
-  // ------------------------------------------------------------------
+  // --------------------------------------------
   var link = svgContent.selectAll("line.link")
     .data(graph.links)
     .enter()
